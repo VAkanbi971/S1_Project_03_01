@@ -1,21 +1,22 @@
 @charset "utf-8";
 
+/* I set the charset to utf so that the browser knows how to read this file. After that I linked the fonts using the @fontface descriptor allowing me to add custom fonts. */
 @font-face {
-    font-family: Champange;
+    font-family: Champagne;
     src: url('cac_champagne.woff') format('.woff');
-    src: url('cac_champagne.ttf') format('.ttf')
+    src: url('cac_champagne.ttf') format('truetype');
 }
 
 @font-face {
     font-family: Grunge;
     src: url('1942.woff') format('.woff');
-    src: url('1942.ttf') format('.ttf')
+    src: url('1942.ttf') format('truetype');
 }
 
 @font-face {
     font-family: Dobkin;
     src: url('DobkinPlain.woff') format('.woff');
-    src: url('DobkinPlain.ttf') format('.ttf')
+    src: url('DobkinPlain.ttf') format('truetype');
 }
 
 /*
@@ -30,30 +31,36 @@
    Filename: ph_styles.css
 
 */
+/* I added coloring elements to the background of the entire document using the html element selector. */
 /* Structural Styles */
 html {
     background-color: hsl(91, 8%, 56%);
 }
 
+/* I changed the font using the fontfamily element as well as changing the background color of the body. */
 body {
     background-color: hsl(58, 31%, 84%);
     font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 
+/* Changed the color of the header background. */
 header {
     background-color: black;
 }
 
+/* I added a element selector so that i could changed the margin of the padding with their respectiv elements. */
 p {
     margin: 0px;
     padding: 5px 25px 25px 25px;
 }
 
+/* In the selector of the direct child of the body that is a p tag i edited the font size and the padding. */
 body>p {
     font-size: 1.1em;
     text-align: center
 }
 
+/* I changed the font style size allignment and the padding of the address */
 address {
     font-style: normal;
     font-size: 0.9em;
@@ -63,6 +70,7 @@ address {
 }
 
 /* Navigation Styles */
+/* I changed the font and the padding in link in the nav along with how they appeared when being hovered on clicked or just being there in general. */
 nav a {
     font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
     padding-top: 10px;
@@ -82,7 +90,57 @@ nav a:active {
     background-color: hsl(0, 0%, 42%, 0.7);
 }
 
-/* Go to the Section Styles section of the style sheet. In this section, you’ll define the appearance of the four playbills. You’ll start with the h1 headings from the sections. Create a style rule for the section.playbill h1 selector that sets the font size to 3em and the font weight to normal. Set the margin space around the h1 headings to 0 pixels. Set the padding space to 20 pixels on top, 0 pixels on the right, 10 pixels on the bottom, and 20 pixels on the left. */
 /* Section Styles */
-section.playbill h1
+/* Here all i did was change the font and background color for each section respectivly */
+section.playbill h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 20px 0px 10px 20px;
+}
+
+section#play1 {
+    background-color: hsl(240, 100%, 88%);
+}
+
+section#play2 {
+    background-color: hsl(25, 88%, 73%);
+}
+
+section#play3 {
+    background-color: hsl(0, 100%, 75%);
+}
+
+section#play4 {
+    background-color: hsl(296, 86%, 86%);
+}
+
+section#play1 h1 {
+    font-family: Champagne, cursive;
+}
+
+section#play2 h1 {
+    font-family: Grunge, ‘Times New Roman’, Times, serif;
+}
+
+section#play3 h1 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+section#play4 h1 {
+    font-family: Dobkin, cursive;
+}
+
 /* Description List Styles */
+/* I altered the font size weight and changed the color of the dt and dd tags */
+dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
